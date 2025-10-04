@@ -3,7 +3,7 @@ import { newHttpBatchRpcResponse, RpcTarget } from "capnweb";
 import { Api } from "./api.ts";
 
 class ApiImpl extends RpcTarget implements Api {
-  constructor(public c: Context) {
+  constructor(private c: Context) {
     super();
   }
   greet(name: string): string {
