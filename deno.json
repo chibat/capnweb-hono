@@ -4,7 +4,7 @@
     "hono": "jsr:@hono/hono@^4.9.9"
   },
   "tasks": {
-    "server": "deno --watch -N=:8000 server.ts",
+    "server": "deno serve --watch server.ts",
     "client": "deno -N=localhost:8000 client.ts"
   },
   "compilerOptions": {

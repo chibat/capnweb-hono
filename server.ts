@@ -16,7 +16,5 @@ class ApiImpl extends RpcTarget implements Api {
 }
 
 const app = new Hono();
-
 app.post("/api", (c) => newHttpBatchRpcResponse(c.req.raw, new ApiImpl(c)));
-
-Deno.serve(app.fetch);
+export default { fetch: app.fetch };
